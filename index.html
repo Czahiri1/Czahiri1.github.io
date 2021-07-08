@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Page</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .Container{
+display: grid;
+grid-template-columns:20% 50% 30%;
+min-height: 100vh;
+min-width: 100vh;
+        }
+        .Left{
+            border: grey 1px solid;
+            color: white;
+        }
+        .Middle{
+            border: grey 1px solid;
+            color: white;
+        }
+        .Right{
+            border: grey 1px solid;
+            color: white;
+        }
+        .Bird{
+  display: block;
+  margin-left: 27%;
+  margin-right: 73%;
+  width: 20%;
+  
+        }
+        .Left-Container{
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    border: white 5px;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+            transform: translate(0px);
+            border: 1px grey solid;
+            position: sticky;
+        }
+        .number-of-tweets{
+            color: grey;
+            transform: translate(70px,-45px);
+        }
+        .main-container{
+            color: grey;
+        }
+        .elonmusk{
+            transform: translate(25px, -200px);
+        }
+        .Elon-Text{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            align-items: center;
+            text-align: center;
+            transform: translate(25px,-165px);
+        }
+        .calendar{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            transform: translate(10px, -225px);
+        }
+        .Follower-Info{
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            transform: translate(23px,-240px);
+        }
+        .random{
+            transform: translate(25px, -250px);
+        }
+        .image-buttons{
+            display: flex;
+            flex-direction: row;
+            transform: translate(518px, -575px);
+            align-items: center;
+            gap: -15px;
+        }
+        .Left-Text{
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+            transform: translate(125px,-150px);
+        }
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            align-items: center;
+            transform: translate(0,-375px);
+            border: solid grey 1px;
+        }
+        .stick{
+            position: sticky;
+        }
+        #tweets{
+            background-color: transparent;
+            font-size: x-large;
+        }
+        #tweets:hover{
+            opacity: 80%;
+        }
+        #replies{
+            background-color: transparent;
+            font-size: x-large;
+        }
+        #replies:hover{
+            opacity: 80%;
+        }
+        #media{
+            background-color: transparent;
+            font-size: x-large;
+        }
+        #media:hover{
+            opacity: 80%;
+        }
+        #likes{
+            background-color: transparent;
+            font-size: x-large;
+            
+        }
+        #likes:hover{
+            opacity: 80%;
+        }
+        .Tweet{
+            background-color: #1DA1F2;
+            border-radius: 50px;
+            border-color: black;
+            border-style: solid;
+            color: white;
+            transform: translate(-125px,-10px);
+            object-fit: fill;
+            font-size: x-large;
+            padding-left:0%;
+            padding-right:0%;
+            font-family: Helvetica, sans-serif;
+        }
+        .Tweet:hover{
+            opacity: 80%;
+        }
+        #followButton{
+            background-color: transparent;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+        #followButton:hover{
+            opacity: 80%;
+        }
+        #moreButton{
+            background-color: transparent;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+        #moreButton:hover{
+            opacity: 80%;
+        }
+        #exploreButton{
+            background-color: transparent;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+        #settingsButton{
+            background-color: transparent;
+            padding: 0;
+            background: none;
+            border: none;
+        }
+        #exploreButton:hover{
+            opacity: 80%;
+        }
+        #settingsButton:hover{
+            opacity: 80%;
+        }
+        .Explore{
+            color: white;
+            transform: translate(-100px,15px);
+        }
+        .Settings{
+            color: white;
+            transform: translate(-100px,15px);
+        }
+        .searchBar{
+            border-radius: 80px;
+            height: 35px;
+            width: 300px;
+            margin-top: 10px;
+            transform: translate(30px,0);
+            color: black;
+            background-color: lightgrey;
+            border-color: lightgrey;
+            padding-left: 50px;
+        }
+        .searchImage{
+            transform: translate(40px, -32px);
+        }
+        .gallery{
+            transform: translate(15px);
+        }
+        .recommendation{
+            border: white 1px;
+            border-radius: 80px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="Container">
+            <div class="Left">
+                <div class="Left-Container">
+                <img src="file:///Users/cyruszahiri/Downloads/10wmt-superJumbo-v4-removebg-preview.png" width="50" height="40" class="Bird"/>
+                <br>
+                <img src="file:///Users/cyruszahiri/Downloads/images-removebg-preview.png" width="10" height="40" class="Bird"/>
+                <br>
+                <img src="file:///Users/cyruszahiri/Downloads/226-2261452_setting-line-icon-hd-png-download-removebg-preview.png" width="10" height="40" class="Bird"/>
+            </div>
+            <div class="Left-Text">
+                <button id="exploreButton"><h2 class="Explore">Explore</h2></button>
+                <button id="settingsButton"><h2 class="Settings">Settings</h2></button>
+                <button class="Tweet">Tweet</button>
+            </div>
+            </div>
+            <div class="Middle">
+                <header class="stick">
+                <div class="header">
+                    <img src="file:///Users/cyruszahiri/Downloads/BackArrow_400x400-removebg-preview.png" width="40" height="40"/>
+                    <h2>Elon Musk</h2>
+                    <img src="file:///Users/cyruszahiri/Downloads/539-5394357_twitter-verified-badge-png-transparent-image-twitter-verified-removebg-preview.png" width="45" height="45"/>
+                </div>
+                <h5 class="number-of-tweets">14.6k Tweets</h5>
+                </header>
+                <div class="main-container">
+                <div class="banner-images">
+                    <img src="https://pbs.twimg.com/profile_banners/44196397/1576183471/1500x500" height="245" width="710" style="transform: translate(0,-50px);"/>
+                    <img src="https://pbs.twimg.com/profile_images/1404334078388670466/DgO3WL4S_400x400.jpg" height="130" width="130" style="border-radius: 100%; transform: translate(45px, -150px);">
+                </div>
+                <div class="Elon-Text">
+                    <h2 style="color: white;">Elon Musk</h2>
+                    <img src="file:///Users/cyruszahiri/Downloads/539-5394357_twitter-verified-badge-png-transparent-image-twitter-verified-removebg-preview.png" width="45" height="45">
+                </div>
+                <div class="Elon-Info">
+                    <h3 class="elonmusk">@elonmusk</h3>
+                    <br>
+                    <div class="calendar"><img src="file:///Users/cyruszahiri/Downloads/111-1111170_seaboard-foods-facts-figures-farm-operations-the-date-removebg-preview.png" width="40" height="40"><h3>Joined June 2009</h3></div>
+                    <div class="Follower-Info"><h3 style="color: white;">108</h3><h3>Following</h3><h3 style="color: white;">57.7M</h3><h3>Followers</h3></div>
+                    <h5 class="random">Not followed by anyone you're following</h5>
+                </div>
+                <div class="image-buttons">
+                    <button id="moreButton"><img src="file:///Users/cyruszahiri/Downloads/images-removebg-preview%20(1).png" width="35" height="35"></button>
+                    <button id="followButton"><img src="file:///Users/cyruszahiri/Downloads/ch-2-3-follow-button.png.twimg.1920-removebg-preview.png " width="150" height="150"></button>
+                </div>
+                <div class="navigation">
+                    <button style="color: grey;" id="tweets" onclick="selectTweets()">Tweets</button>
+                    <button style="color: grey;" id="replies" onclick="selectReplies()">Tweets and Replies</button>
+                    <button style="color: grey;" id="media" onclick="selectMedia()">Media</button>
+                    <button style="color: grey;" id="likes" onclick="selectLikes()">Likes</button>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="Right">
+            <form>
+                <input type="text" class="searchBar" placeholder="Search Twitter">
+            </form>
+            <img src="file:///Users/cyruszahiri/Downloads/104-1043692_search-icon-transparent-white-search-icon-apple-png-removebg-preview.png" width = "27" height = "27" class="searchImage"/>
+            <img src="file:///var/folders/0r/dtm100m50z104y67rvg0rhn00000gn/T/TemporaryItems/NSIRD_screencaptureui_NA7NeO/Screen%20Shot%202021-07-08%20at%201.48.45%20PM.png" height="300" width="400" class="gallery">
+        <div class="recommendation">
+            <h2 style="color: white;transform: translate(30px); border-radius: 80px; border: white;">You might like</h2>
+        </div>
+        </div>
+        </div>
+    </main>
+</body>
+<script>
+    const tweet = document.querySelector("#tweets");
+    const replies = document.querySelector("#replies");
+    const media = document.querySelector("#media");
+    const likes = document.querySelector("#likes");
+    function selectTweets(){
+        if(tweet.style.color == "grey"){
+        tweet.style.color = "#1DA1F2";
+        replies.style.color = "grey";
+        media.style.color = "grey";
+        likes.style.color = "grey";
+
+        }
+        else{
+            tweet.style.color = "grey";
+        }
+        }
+    function selectReplies(){
+        if(replies.style.color == "grey"){
+        replies.style.color = "#1DA1F2";
+        tweet.style.color = "grey";
+        media.style.color = "grey";
+        likes.style.color = "grey";
+        }
+        else{
+            replies.style.color = "grey";
+        }
+        }
+    function selectMedia(){
+        if(media.style.color == "grey"){
+        media.style.color = "#1DA1F2";
+        tweet.style.color = "grey";
+        replies.style.color = "grey";
+        likes.style.color = "grey";
+        }
+        else{
+            media.style.color = "grey";
+        }
+        }
+    function selectLikes(){
+        if(likes.style.color == "grey"){
+        likes.style.color = "#1DA1F2";
+        tweet.style.color = "grey";
+        replies.style.color = "grey";
+        media.style.color = "grey";
+        }
+        else{
+            likes.style.color = "grey";
+        }
+        }
+</script>
+</html>
